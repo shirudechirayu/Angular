@@ -1,0 +1,7 @@
+<h1>Parent Component</h1>
+<p>{{"Text from Child is " + textFromChild}}</p>
+
+<input type="text" #parentTextInput><br>
+<button (click)="writeToChild(parentTextInput.value)">Send to Child</button>
+
+<app-child [fromParent]="parentText" (fromChild)="textFromChild = $event"></app-child>

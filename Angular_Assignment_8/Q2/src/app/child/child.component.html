@@ -1,0 +1,6 @@
+<h2>Child Component</h2>
+
+<p>{{"Text from parent is " + fromParent}}</p>
+
+<input type="text" #childText><br>
+<button (click)="writeToParent(childText.value)">Send to Parent</button>
