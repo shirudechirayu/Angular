@@ -1,0 +1,26 @@
+.pinkish{
+    color:rgb(179, 83, 143);
+}
+
+.pinkbtn{
+    background-color: rgb(179, 83, 143);
+}
+
+.required:after {
+    content:"*";
+    color: red;
+  }
+
+.input1{
+    margin-left: 0.6rem;
+}
+
+button{
+ border-bottom: 0.25rem solid lightgrey;
+}
+
+.deftext{
+    font-size: 0.6rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
