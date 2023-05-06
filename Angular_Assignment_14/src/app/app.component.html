@@ -1,0 +1,88 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div>
+    <h1 class="pinkish text-center">Contact Our</h1>
+    <h1>Customer Support Center</h1>
+  </div>
+  
+  <div>
+    <img src="/assets/macimg.png" alt="macbook">
+  </div>
+</div>
+
+<div class="text-center">
+  <h2>Contact Information</h2>
+  <p>Please fill out your contact Information below</p>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="d-flex w-75">
+    <div class="d-flex-column w-100">
+      <form [formGroup]="MarvellousForm">
+        <div class="p-2">
+          <label class= "d-block required" for="Name">Name</label>
+
+          <div class="d-flex">
+            <div class="form-group">
+              <input [class.is-invalid] = "MarvellousForm.get('firstName')?.invalid && MarvellousForm.get('firstName')?.touched" class= "form-control" type="text" id="Name" formControlName="firstName">
+              <small [class.d-none]="MarvellousForm.get('firstName')?.valid || MarvellousForm.get('firstName')?.untouched" class="text-danger">FirstName is required with proper format</small>
+              <p class="deftext">First Name</p>
+            </div>
+            
+            <div class="input1 form-group">
+              <input [class.is-invalid] = "MarvellousForm.get('lastName')?.invalid && MarvellousForm.get('lastName')?.touched" class= "form-control" type="text" formControlName="lastName">
+              <small [class.d-none]="MarvellousForm.get('lastName')?.valid || MarvellousForm.get('lastName')?.untouched" class="text-danger">LastName is required with proper format</small>
+              <p class="deftext">Last Name</p>
+            </div>
+          </div>
+        </div>
+          
+        
+        <div class="p-2 form-group">
+          <label class= "d-block required" for="email">Email</label>
+          <input [class.is-invalid] = "MarvellousForm.get('email')?.invalid && MarvellousForm.get('email')?.touched" class= "d-block w-100 form-control" type="text" id="email" formControlName="email">
+          <small [class.d-none]="MarvellousForm.get('email')?.valid || MarvellousForm.get('email')?.untouched" class="text-danger">Email is required with proper format</small>
+        </div>
+        
+        <div class="p-2 form-group">
+          <label class= "d-block required" for="phone">Phone</label>
+          <input [class.is-invalid] = "MarvellousForm.get('phone')?.invalid && MarvellousForm.get('phone')?.touched" class= "d-block w-100 form-control" type="text" id="phone" formControlName="phone">
+          <small [class.d-none]="MarvellousForm.get('phone')?.valid || MarvellousForm.get('phone')?.untouched" class="text-danger">Phone Number is required with proper format</small>
+        </div>
+        
+        <div class="p-2 form-group">
+          <label class= "d-block required" for="city">City</label>
+          <input [class.is-invalid] = "MarvellousForm.get('city')?.invalid && MarvellousForm.get('city')?.touched" class= "d-block w-100 form-control" type="text" id="city" formControlName="city">
+          <small [class.d-none]="MarvellousForm.get('city')?.valid || MarvellousForm.get('city')?.untouched" class="text-danger">City is required with proper format</small>
+        </div>
+
+        <div class="p-2 form-group">
+          <label class= "d-block required" for="state">State</label>
+          <select [class.is-invalid] = "MarvellousForm.get('state')?.invalid && MarvellousForm.get('state')?.touched" class="d-block w-100 form-control" id="state" name="state" formControlName="state">
+            <option value="" selected>Choose a state</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+          </select>
+        </div>
+
+        <div class="p-2 form-group">
+          <label class= "d-block required" for="zipCode">ZipCode</label>
+          <input [class.is-invalid] = "MarvellousForm.get('zipCode')?.invalid && MarvellousForm.get('zipCode')?.touched" class= "d-block w-100 form-control" type="text" id="zipCode" formControlName="zipCode">
+        </div>
+
+        <div class="p-2 form-group">
+          <label class= "d-block required" for="comments">Comments</label>
+          <input [class.is-invalid] = "MarvellousForm.get('comments')?.invalid && MarvellousForm.get('comments')?.touched" class= "d-block w-100 form-control" type="text" id="comments" formControlName="comments">
+        </div>
+        
+        <div class="p-2 m-3 text-center">
+          <button class="btn btn-lg pinkbtn text-white rounded-0" [disabled]="!MarvellousForm.valid">SUBMIT FORM</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>  
+</div>
+
+
+
